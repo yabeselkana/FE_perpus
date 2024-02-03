@@ -1,7 +1,8 @@
 import React from "react";
 import style from "./navbar.module.css";
 import { Link } from "react-router-dom";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMailBulk, faPhone } from "@fortawesome/free-solid-svg-icons";
 export const Navbar = () => {
   return (
     <>
@@ -15,6 +16,14 @@ export const Navbar = () => {
       </style>
 
       <header>
+        <div className={`${style.kontak}  kontak`}>
+          <div className="row">
+            <FontAwesomeIcon className={`${style.call} call`} icon={faPhone} size="1x" />
+            <span className={`${style.number} number`}>(061) 7883991 | 0877 6644 8555</span>
+            <FontAwesomeIcon className={`${style.number} number`} icon={faMailBulk} />
+            <span className={`${style.number} number`}>stims@stimsukmamedan.ac.id</span>
+          </div>
+        </div>
         <nav className="container">
           <div
             style={{

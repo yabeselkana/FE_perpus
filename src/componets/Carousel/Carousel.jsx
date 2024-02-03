@@ -1,35 +1,47 @@
 import React from "react";
 import gbr from "../../assets/carousel/peprpus.jpg";
+import gbr1 from "../../assets/carousel/wallpaperbetter (1).jpg";
+import gbr2 from "../../assets/carousel/wallpaperbetter.jpg";
+
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import Style from "./Corousel.module.css";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 export const Carousel = () => {
   return (
-    <section className="container mt-4 ">
-      <div id=" carouselExampleIndicators" className="carousel slide" data-ride="carousel">
-        <ol className="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to={0} className="active" />
-          <li data-target="#carouselExampleIndicators" data-slide-to={1} />
-          <li data-target="#carouselExampleIndicators" data-slide-to={2} />
-        </ol>
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img className="d-block w-100" src={gbr} alt="First slide" />
-          </div>
-          <div className="carousel-item">
-            <img className="d-block w-100" src="..." alt="Second slide" />
-          </div>
-          <div className="carousel-item">
-            <img className="d-block w-100" src="..." alt="Third slide" />
-          </div>
+    <>
+      <div className={`${Style.background} background`}>
+        <div className="container">
+          <Swiper
+            // install Swiper modules
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            spaceBetween={30}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log("slide change")}
+          >
+            <SwiperSlide className={``}>
+              <img className={`${Style.gambar1} gambar1`} src={gbr1} alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={gbr1} alt="" />
+            </SwiperSlide>
+            <SwiperSlide>{gbr2}</SwiperSlide>
+            <SwiperSlide>Slide 4</SwiperSlide>
+            ...
+          </Swiper>
         </div>
-        <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true" />
-          <span className="sr-only">Previous</span>
-        </a>
-        <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true" />
-          <span className="sr-only">Next</span>
-        </a>
       </div>
-    </section>
+    </>
   );
 };
