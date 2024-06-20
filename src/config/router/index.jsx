@@ -6,6 +6,10 @@ import Home from "../../pages/Home";
 import Page404 from "../../pages/Page404";
 import Login from "../../pages/Auth/Login";
 import Register from "../../pages/Auth/Register";
+import { Mhs } from "../../pages/Mhs";
+import TableMhs from "../../pages/TableMhs";
+import DashboardBuku from "../../pages/DashboardBuku";
+import Pengarang from "../../pages/Pengarang";
 
 const Router = () => {
   return (
@@ -17,6 +21,10 @@ const Router = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/about" element={<About />} />
+          <Route path="/inputMhs" element={<Mhs />} />
+          <Route path="/myMhs" element={<TableMhs />} />
+          <Route path="/dashboardBuku" element={<DashboardBuku />} />
+          <Route path="/Pengarang" element={<Pengarang />} />
           <Route path="/product/:id" element={<Detail />} />
           <Route path="*" element={<Page404 />} />
         </Routes>

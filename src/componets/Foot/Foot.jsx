@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../../assets/logo/logosimsukma.png";
 
 import style from "./foot.module.css";
 
@@ -9,8 +10,9 @@ const Foot = () => {
         <div className="">
           <div className="container brand">
             <div className="  row mb-3">
-              <div className="col-md-8 col-12">
-                <h1>STIM SUKMA</h1>
+              <div className={`col-md-8 col-12 ${style.logofoot} logofoot`}>
+                <img className={`  ${style.logo} logo`} src={logo} alt="" />
+                <h1 className="pl-3 ">STIM SUKMA</h1>
               </div>
             </div>
             <div className="row description">

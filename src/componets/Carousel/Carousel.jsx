@@ -34,11 +34,11 @@ export const Carousel = () => {
               <img className={`${Style.gambar1} gambar1`} src={gbr1} alt="" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={gbr1} alt="" />
+              <img className={`${Style.gambar1} gambar1`} src={gbr} alt="" />
             </SwiperSlide>
-            <SwiperSlide>{gbr2}</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
-            ...
+            <SwiperSlide>
+              <img className={`${Style.gambar1} gambar1`} src={gbr2} alt="" />
+            </SwiperSlide>
           </Swiper>
         </div>
       </div>

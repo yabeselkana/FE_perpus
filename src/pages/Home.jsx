@@ -5,11 +5,10 @@ import Foot from "../componets/Foot/Foot";
 import NavLogin from "../componets/NavLogin/NavLogin";
 
 const Home = () => {
+  const login = localStorage.getItem("token");
   return (
     <div>
-      <Navbar />
-
-      {/* <NavLogin /> */}
+      {!login ? <Navbar /> : <NavLogin />}
       <Carousel />
       <Foot />
     </div>

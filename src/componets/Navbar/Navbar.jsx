@@ -8,10 +8,16 @@ export const Navbar = () => {
     <>
       <style>
         header {"{"}
-        top: 0; position: sticky; background-color:lightblue; transition: background-color 0.2s ease-in-out; z-index: 10;
+        top: 0; position: sticky; background-color: transparent; transition: background-color 0.2s ease-in-out; z-index: 10;
         {"}"}
         header.scrolled {"{"}
-        background-color: lightgray; opacity: 0.98;
+        background-color: lightblue; opacity: 0.98;
+        {"}"}
+        .icon {"{"}
+        height: 50px; width: 50px; position: relative; background-color: lightblue;
+        {"}"}
+        .icon::after {"{"}
+        content: ""; width: 15px; height: 15px; background-color: beige; position: absolute; border-radius: 100%; right: 0px; top: 0px;
         {"}"}
       </style>
 
